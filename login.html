@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - T. Abernathy</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%231a3a5f'/%3E%3Cpath d='M30 20 L70 20 L70 80 L30 80 Z' fill='%23f5f1e8'/%3E%3Cpath d='M35 25 L65 25 L65 75 L35 75 Z' fill='none' stroke='%231a3a5f' stroke-width='2'/%3E%3Cline x1='40' y1='35' x2='60' y2='35' stroke='%231a3a5f' stroke-width='1.5'/%3E%3Cline x1='40' y1='45' x2='60' y2='45' stroke='%231a3a5f' stroke-width='1.5'/%3E%3Cline x1='40' y1='55' x2='60' y2='55' stroke='%231a3a5f' stroke-width='1.5'/%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%231a3a5f'/%3E%3Cpath d='M30 20 L70 20 L70 80 L30 80 Z' fill='%23f5f1e8'/%3E%3Cpath d='M35 25 L65 25 L65 75 L35 75 Z' fill='none' stroke='%231a3a5f' stroke-width='2'/%3E%3Cline x1='40' y1='35' x2='60' y2='35' stroke='%231a3a5f' stroke-width='1.5'/%3E%3Cline x1='40' y1='45' x2='60' y2='45' stroke='%231a3a5f' stroke-width='1.5'/%3E%3Cline x1='40' y1='55' x2='60' y2='55' stroke='%231a3a5f' stroke-width='1.5'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+   
+    <!-- Login Section -->
+    <section class="section" style="min-height: 60vh; display: flex; align-items: center;">
+        <div class="container">
+            <div style="max-width: 400px; margin: 0 auto;">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <a href="index.html" class="logo" style="justify-content: center; font-size: 2rem; margin-bottom: 1rem;">
+                        <div class="logo-icon"></div>
+                        <span>T. Abernathy</span>
+                    </a>
+                </div>
+                <h1 style="text-align: center; color: var(--primary-color); margin-bottom: 2rem;">Welcome Back</h1>
+                <form id="loginForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password *</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form-group" style="display: flex; justify-content: space-between; align-items: center; gap: 1rem;">
+                        <label style="margin: 0;">
+                            <input type="checkbox" name="remember" style="width: auto; margin-right: 0.5rem;">
+                            Remember me
+                        </label>
+                        <a href="#" style="color: var(--primary-color); text-decoration: none; margin-left: auto;">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Login</button>
+                    
+                    <!-- Social Login -->
+                    <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
+                        <p style="text-align: center; color: var(--text-light); margin-bottom: 1rem;">Or continue with:</p>
+                        <div style="display: flex; gap: 1rem; flex-direction: column;">
+                            <button type="button" class="social-login-btn google-btn" onclick="loginWithGoogle()">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                                </svg>
+                                Continue with Google
+                            </button>
+                            <button type="button" class="social-login-btn facebook-btn" onclick="loginWithFacebook()">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                                Continue with Facebook
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <p style="text-align: center; margin-top: 1.5rem;">
+                        Don't have an account? <a href="register.html" style="color: var(--primary-color); text-decoration: none;">Register here</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (validateForm('loginForm')) {
+                // Simulate login
+                alert('Login successful! Redirecting...');
+                // In a real application, you would handle authentication here
+                window.location.href = 'index.html';
+            }
+        });
+        
+        function loginWithGoogle() {
+            // In a real application, this would integrate with Google OAuth
+            alert('Google login would be implemented here');
+            // window.location.href = 'google-oauth-url';
+        }
+        
+        function loginWithFacebook() {
+            // In a real application, this would integrate with Facebook OAuth
+            alert('Facebook login would be implemented here');
+            // window.location.href = 'facebook-oauth-url';
+        }
+    </script>
+</body>
+</html>
+

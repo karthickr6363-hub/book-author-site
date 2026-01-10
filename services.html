@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - T. Abernathy</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%231a3a5f'/%3E%3Cpath d='M30 20 L70 20 L70 80 L30 80 Z' fill='%23f5f1e8'/%3E%3Cpath d='M35 25 L65 25 L65 75 L35 75 Z' fill='none' stroke='%231a3a5f' stroke-width='2'/%3E%3Cline x1='40' y1='35' x2='60' y2='35' stroke='%231a3a5f' stroke-width='1.5'/%3E%3Cline x1='40' y1='45' x2='60' y2='45' stroke='%231a3a5f' stroke-width='1.5'/%3E%3Cline x1='40' y1='55' x2='60' y2='55' stroke='%231a3a5f' stroke-width='1.5'/%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%231a3a5f'/%3E%3Cpath d='M30 20 L70 20 L70 80 L30 80 Z' fill='%23f5f1e8'/%3E%3Cpath d='M35 25 L65 25 L65 75 L35 75 Z' fill='none' stroke='%231a3a5f' stroke-width='2'/%3E%3Cline x1='40' y1='35' x2='60' y2='35' stroke='%231a3a5f' stroke-width='1.5'/%3E%3Cline x1='40' y1='45' x2='60' y2='45' stroke='%231a3a5f' stroke-width='1.5'/%3E%3Cline x1='40' y1='55' x2='60' y2='55' stroke='%231a3a5f' stroke-width='1.5'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+      <!-- Header -->
+      <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"></div>
+                <span>T. Abernathy</span>
+            </a>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle active">Home <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html" class="active">Home 1</a></li>
+                            <li><a href="index2.html">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="books.html">Books</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="login.html" class="nav-btn nav-btn-login">Login</a></li>
+                    <li><a href="register.html" class="nav-btn nav-btn-register">Register</a></li>
+                    <a href="admin-dashboard.html" class="dashboard-link">Dashboard</a>
+                    
+                </ul>
+            </nav>
+           
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="section" style="background-color: var(--primary-color); color: var(--white); padding: 3rem 0;">
+        <div class="container">
+            <h1 style="font-size: 3rem; text-align: center;">Our Services</h1>
+            <p style="text-align: center; font-size: 1.2rem; margin-top: 1rem;">Professional writing, editing, and publishing services tailored to your needs</p>
+        </div>
+    </section>
+
+    <!-- View Toggle -->
+    <section class="section" style="padding: 2rem 0;">
+        <div class="container">
+            <div class="view-toggle">
+                <button class="view-btn active" data-view="grid">Grid View</button>
+                <button class="view-btn" data-view="list">List View</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid View -->
+    <section class="section services-section">
+        <div class="container">
+            <div class="services-grid" id="servicesContainer">
+                <!-- Book Writing -->
+                <div class="service-card filterable-item" data-category="writing">
+                    <div class="service-icon">✍️</div>
+                    <h3>Book Writing and Editing</h3>
+                    <p>From concept to completion, we help you craft compelling narratives that captivate readers. Whether you're writing fiction, non-fiction, or memoirs, our experienced writers will bring.</p>
+                    <ul class="service-features">
+                        <li>Full manuscript writing and book writing</li>
+                        <li>Chapter-by-chapter development and book</li>
+                        <li>Character and plot development</li>
+                        <li>Book writing and editing & book writing </li>
+                        
+                    </ul>
+                    <div class="service-price">Starting at $2,999</div>
+                    <a href="service-details.html?service=writing" class="btn btn-primary">Learn More</a>
+                </div>
+
+                <!-- Editing & Proofreading -->
+                <div class="service-card filterable-item" data-category="editing">
+                    <div class="service-icon">📝</div>
+                    <h3>Editing & Proofreading</h3>
+                    <p>Comprehensive editing services to polish your manuscript to perfection. We offer developmental editing, line editing, copy editing, and proofreading to ensure your work is publication-ready.</p>
+                    <ul class="service-features">
+                        <li>Developmental editing and book writing</li>
+                        <li>Line and copy editing and book writing</li>
+                        <li>Proofreading and book writing</li>
+                        <li>Style guide adherence and book writing</li>
+                    </ul>
+                    <div class="service-price">Starting at $999</div>
+                    <a href="service-details.html?service=editing" class="btn btn-primary">Learn More</a>
+                </div>
+
+                <!-- Publishing Consultation -->
+                <div class="service-card filterable-item" data-category="publishing">
+                    <div class="service-icon">📚</div>
+                    <h3>Publishing Consultation</h3>
+                    <p>Expert guidance through the publishing process from start to finish. We help you navigate traditional publishing, self-publishing, and hybrid options to find the best path for your book.</p>
+                    <ul class="service-features">
+                        <li>Publishing strategy and book writing</li>
+                        <li>Agent and publisher connections</li>
+                        <li>Self-publishing guidance</li>
+                        <li>Marketing consultation and book writing</li>
+                    </ul>
+                    <div class="service-price">Starting at $499</div>
+                    <a href="service-details.html?service=publishing" class="btn btn-primary">Learn More</a>
+                </div>
+
+                <!-- Ghostwriting -->
+                <div class="service-card filterable-item" data-category="ghostwriting">
+                    <div class="service-icon">👻</div>
+                    <h3>Ghostwriting and Book Writing</h3>
+                    <p>Professional ghostwriting services to bring your ideas to life. We work closely with you to capture your voice and vision, creating compelling content that tells your story authentically.</p>
+                    <ul class="service-features">
+                        <li>Full ghostwriting services</li>
+                        <li>Voice matching and book writing</li>
+                        <li>Confidentiality guaranteed</li>
+                        <li>Multiple revisions and book writing</li>
+                    </ul>
+                    <div class="service-price">Starting at $4,999</div>
+                    <a href="service-details.html?service=ghostwriting" class="btn btn-primary">Learn More</a>
+                </div>
+
+                <!-- Workshops & Training -->
+                <div class="service-card filterable-item" data-category="training">
+                    <div class="service-icon">🎓</div>
+                    <h3>Workshops & Training</h3>
+                    <p>Educational workshops to enhance your writing skills and knowledge. From beginner courses to advanced masterclasses, we offer comprehensive training programs for writers at all levels.</p>
+                    <ul class="service-features">
+                        <li>Online and in-person workshops</li>
+                        <li>Writing craft courses</li>
+                        <li>Publishing workshops</li>
+                        <li>One-on-one training</li>
+                        <li>Book writing and editing</li>
+                    </ul>
+                    <div class="service-price">Starting at $199</div>
+                    <a href="service-details.html?service=training" class="btn btn-primary">Learn More</a>
+                </div>
+
+                <!-- Coaching -->
+                <div class="service-card filterable-item" data-category="coaching">
+                    <div class="service-icon">💼</div>
+                    <h3>Coaching and Book Writing</h3>
+                    <p>One-on-one coaching sessions to guide your writing journey. Our personalized coaching helps you overcome writer's block, develop your craft, and achieve your writing goals and book.</p>
+                    <ul class="service-features">
+                        <li>Personalized coaching sessions</li>
+                        <li>Goal setting </li>
+                        <li>Manuscript feedback</li>
+                        <li>Career guidance</li>
+                        <li>Book writing and editing</li>
+                        
+                    </ul>
+                    <div class="service-price">Starting at $149</div>
+                    <a href="service-details.html?service=coaching" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+ <!-- Newsletter Signup -->
+ <section class="newsletter-section">
+    <div class="container">
+        <h2>Stay Connected</h2>
+        <p>Subscribe to our newsletter for the latest updates, book releases, and writing tips.</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email address" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+                <div class="footer-section">
+                    <h3 style="display: flex; align-items: center; gap: 0.5rem;">
+                        <div class="logo-icon" style="background-color: var(--white);"></div>
+                        T. Abernathy
+                    </h3>
+                    <p>A literary haven for book lovers and writers alike. Discover curated reads and professional writing services.</p>
+                </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="books.html">Books</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="services.html#writing">Book Writing</a></li>
+                    <li><a href="services.html#editing">Editing</a></li>
+                    <li><a href="services.html#publishing">Publishing</a></li>
+                    <li><a href="services.html#ghostwriting">Ghostwriting</a></li>
+                    <li><a href="services.html#coaching">Coaching</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 T. Abernathy. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/services.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - T. Abernathy</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%231a3a5f'/%3E%3Cpath d='M30 20 L70 20 L70 80 L30 80 Z' fill='%23f5f1e8'/%3E%3Cpath d='M35 25 L65 25 L65 75 L35 75 Z' fill='none' stroke='%231a3a5f' stroke-width='2'/%3E%3Cline x1='40' y1='35' x2='60' y2='35' stroke='%231a3a5f' stroke-width='1.5'/%3E%3Cline x1='40' y1='45' x2='60' y2='45' stroke='%231a3a5f' stroke-width='1.5'/%3E%3Cline x1='40' y1='55' x2='60' y2='55' stroke='%231a3a5f' stroke-width='1.5'/%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%231a3a5f'/%3E%3Cpath d='M30 20 L70 20 L70 80 L30 80 Z' fill='%23f5f1e8'/%3E%3Cpath d='M35 25 L65 25 L65 75 L35 75 Z' fill='none' stroke='%231a3a5f' stroke-width='2'/%3E%3Cline x1='40' y1='35' x2='60' y2='35' stroke='%231a3a5f' stroke-width='1.5'/%3E%3Cline x1='40' y1='45' x2='60' y2='45' stroke='%231a3a5f' stroke-width='1.5'/%3E%3Cline x1='40' y1='55' x2='60' y2='55' stroke='%231a3a5f' stroke-width='1.5'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"></div>
+                <span>T. Abernathy</span>
+            </a>
+            <div class="header-actions">
+                <a href="index.html" class="logout-btn">Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dashboard -->
+    <section class="section">
+        <div class="container">
+            <h1 style="color: var(--primary-color); margin-bottom: 2rem;">Admin Dashboard</h1>
+            
+            <!-- Overview Analytics -->
+            <div class="dashboard-section">
+                <h2>Overview Analytics</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">📊</div>
+                        <div class="stat-value">1,234</div>
+                        <div class="stat-label">Total Visitors</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📚</div>
+                        <div class="stat-value">45</div>
+                        <div class="stat-label">Books Sold</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">✉️</div>
+                        <div class="stat-value">23</div>
+                        <div class="stat-label">New Messages</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">💰</div>
+                        <div class="stat-value">$12,450</div>
+                        <div class="stat-label">Revenue</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User Management -->
+            <div class="dashboard-section">
+                <h2>User Management</h2>
+                <div class="table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Type</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>john@example.com</td>
+                                <td>Reader</td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td>
+                                    <button class="btn-small">Edit</button>
+                                    <button class="btn-small">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Jane Smith</td>
+                                <td>jane@example.com</td>
+                                <td>Author</td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td>
+                                    <button class="btn-small">Edit</button>
+                                    <button class="btn-small">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Book Orders / Sales -->
+            <div class="dashboard-section">
+                <h2>Book Orders / Sales</h2>
+                <div class="table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Book</th>
+                                <th>Customer</th>
+                                <th>Amount</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#1234</td>
+                                <td>The Art of Storytelling</td>
+                                <td>John Doe</td>
+                                <td>$24.99</td>
+                                <td>2024-03-15</td>
+                                <td><span class="status-badge success">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>#1235</td>
+                                <td>Literary Masterpieces</td>
+                                <td>Jane Smith</td>
+                                <td>$29.99</td>
+                                <td>2024-03-14</td>
+                                <td><span class="status-badge pending">Pending</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Messages & Inquiries -->
+            <div class="dashboard-section">
+                <h2>Messages & Inquiries</h2>
+                <div class="messages-list">
+                    <div class="message-item">
+                        <div class="message-header">
+                            <strong>Sarah Johnson</strong>
+                            <span class="message-date">2024-03-15</span>
+                        </div>
+                        <p class="message-preview">Interested in editing services for my manuscript...</p>
+                        <button class="btn-small">View</button>
+                    </div>
+                    <div class="message-item">
+                        <div class="message-header">
+                            <strong>Michael Chen</strong>
+                            <span class="message-date">2024-03-14</span>
+                        </div>
+                        <p class="message-preview">Question about publishing consultation...</p>
+                        <button class="btn-small">View</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Management -->
+            <div class="dashboard-section">
+                <h2>Blog Management</h2>
+                <div style="margin-bottom: 1rem;">
+                    <a href="#" class="btn btn-primary">Create New Post</a>
+                </div>
+                <div class="table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Category</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>The Art of Character Development</td>
+                                <td>Writing Tips</td>
+                                <td>2024-03-15</td>
+                                <td><span class="status-badge active">Published</span></td>
+                                <td>
+                                    <button class="btn-small">Edit</button>
+                                    <button class="btn-small">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Writing Tips for Beginners</td>
+                                <td>Writing Tips</td>
+                                <td>2024-03-10</td>
+                                <td><span class="status-badge active">Published</span></td>
+                                <td>
+                                    <button class="btn-small">Edit</button>
+                                    <button class="btn-small">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+
